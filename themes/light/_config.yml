@@ -1,0 +1,43 @@
+menu:
+  首页: index
+  归档: archives
+
+widgets:
+- search
+- category
+- tag
+
+
+excerpt_link: Read More
+
+twitter:
+  username:
+  show_replies: false
+  tweet_count: 2
+
+addthis:
+  enable: false
+  pubid:
+  facebook: true
+  twitter: true
+  google: false
+  pinterest: false
+
+fancybox: true
+
+google_analytics:
+rss:
+
+#*comment_changyan:
+  
+  #appid: cyw9HyArs
+  #appkey: 3b8b3755196867bfd2baab186753c7ae
+
+#8、Valine
+valine: 
+ enable: true
+ appid: dlQHGTf3oI0TeHYURwhWlKJj-MdYXbMMI #Leancloud应用的appId
+ appkey: dlQHGTf3oI0TeHYURwhWlKJj-MdYXbMMI #Leancloud应用的appKey
+ verify: false #验证码
+ notify: true #评论回复提醒
+ placeholder: 来跟我聊聊吧！求你了！ #评论框占位符
