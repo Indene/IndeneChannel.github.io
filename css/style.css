@@ -10,6 +10,11 @@
   padding: 0;
 }
 body {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
   background: #eee;
   color: #444;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
@@ -109,6 +114,136 @@ a:hover {
   #wrapper {
     margin-right: 0;
   }
+}
+#dark {
+  cursor: pointer;
+  position: fixed;
+  right: 60px;
+  bottom: 98px;
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+  font-size: 30px;
+}
+.dark {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #000;
+  background-image: -webkit-radial-gradient(#fff, rgba(255,255,255,0.2) 2px, transparent 40px), -webkit-radial-gradient(#fff, rgba(255,255,255,0.15) 1px, transparent 30px), -webkit-radial-gradient(#fff, rgba(255,255,255,0.1) 2px, transparent 40px), -webkit-radial-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.1) 2px, transparent 30px);
+  background-image: -moz-radial-gradient(#fff, rgba(255,255,255,0.2) 2px, transparent 40px), -moz-radial-gradient(#fff, rgba(255,255,255,0.15) 1px, transparent 30px), -moz-radial-gradient(#fff, rgba(255,255,255,0.1) 2px, transparent 40px), -moz-radial-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.1) 2px, transparent 30px);
+  background-image: -o-radial-gradient(#fff, rgba(255,255,255,0.2) 2px, transparent 40px), -o-radial-gradient(#fff, rgba(255,255,255,0.15) 1px, transparent 30px), -o-radial-gradient(#fff, rgba(255,255,255,0.1) 2px, transparent 40px), -o-radial-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.1) 2px, transparent 30px);
+  background-image: -ms-radial-gradient(#fff, rgba(255,255,255,0.2) 2px, transparent 40px), -ms-radial-gradient(#fff, rgba(255,255,255,0.15) 1px, transparent 30px), -ms-radial-gradient(#fff, rgba(255,255,255,0.1) 2px, transparent 40px), -ms-radial-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.1) 2px, transparent 30px);
+  background-image: radial-gradient(#fff, rgba(255,255,255,0.2) 2px, transparent 40px), radial-gradient(#fff, rgba(255,255,255,0.15) 1px, transparent 30px), radial-gradient(#fff, rgba(255,255,255,0.1) 2px, transparent 40px), radial-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+/*标题*/
+/*文章小版块*/
+/*侧边栏*/
+/*个人介绍*/
+/*文章标题*/
+  article: header;
+/*标题颜色*/
+/* 背景遮罩 */
+/* 主体 */
+/* page-number */
+/* back to top */
+/* Toc */
+/* footer */
+/* 归档页 */
+/* 友链页 */
+}
+.dark #header a {
+  color: #fff;
+  text-shadow: 0px 0px 5px #fff;
+}
+.dark article {
+  -webkit-box-shadow: 1px 2px 3px #868686;
+  box-shadow: 1px 2px 3px #868686;
+}
+.dark .post-content {
+  background-color: #282c34;
+}
+.dark #sidebar .widget {
+  background-color: #282c34;
+  -webkit-box-shadow: 1px 2px 3px #7c7c7c;
+  box-shadow: 1px 2px 3px #7c7c7c;
+}
+.dark .title a {
+  color: #c8c8c8;
+}
+.dark h1,
+.dark h2,
+.dark h3 {
+  color: #a09c9c;
+}
+.dark a {
+  color: #a09c9c;
+}
+.dark .mask {
+  background-color: rgba(0,0,0,0.7) !important;
+}
+.dark #board {
+  background-color: #282c34;
+  color: #a09c9c;
+}
+.dark img {
+  filter: brightness(80%);
+}
+.dark p,
+.dark .index-info a {
+  color: #a09c9c !important;
+}
+.dark .markdown-body h1,
+.dark .markdown-body h2,
+.dark .markdown-body h3,
+.dark .markdown-body h4,
+.dark .markdown-body h5,
+.dark .markdown-body h6,
+.dark .markdown-body s,
+.dark .markdown-body li {
+  color: #a09c9c !important;
+}
+.dark .pagination a:hover,
+.dark .pagination .current {
+  background-color: rgba(107,107,107,0.451);
+}
+.dark #scroll-top-button {
+  background-color: #282c34;
+}
+.dark #scroll-top-button i {
+  color: #a09c9c;
+}
+.dark .tocbot-list a {
+  color: #a09c9c;
+}
+.dark .tocbot-active-link,
+.dark footer a:hover {
+  color: #1abc9c !important;
+}
+.dark footer,
+.dark footer a {
+  color: #a09c9c;
+}
+.dark .list-group-item {
+  color: #a09c9c;
+  background-color: #282c34;
+}
+.dark .list-group-item:hover,
+.dark .tagcloud a:hover {
+  background-color: #46484d;
+}
+.dark .links .card {
+  background-color: #282c34;
+}
+.dark .links .card-body:hover {
+  background-color: #46484d;
+}
+.dark .links .link-title,
+.dark .links .link-intro {
+  color: #a09c9c;
 }
 #header {
   text-shadow: 0 0 1px #fff;

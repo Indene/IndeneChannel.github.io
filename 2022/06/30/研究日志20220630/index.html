@@ -27,8 +27,35 @@
 
 <meta name="generator" content="Hexo 6.2.0"></head>
 
+<script>
+  function switchDarkMode() {
+	if ($('body').hasClass('dark')) {
+		$("#dark").html("🌞");
+		document.body.classList.remove('dark');
+		localStorage.setItem('noDark', '1');
+		localStorage.setItem('dark', '0');
+	} else {
+		$("#dark").html("🌙"); 
+		document.body.classList.add('dark');
+		localStorage.setItem('dark', '1');
+		localStorage.setItem('noDark', '0');
+	}
+}
+
+</script>
 
 <body>
+  <div id="dark" onclick="switchDarkMode()"></div>
+  <script>
+    var isNight = new Date().getHours() >= 22 || new Date().getHours() < 7; // 指定时间
+     // 依次判断 系统暗黑模式 指定时间 缓存 dark
+    if( matchMedia('(prefers-color-scheme: dark)').matches || isNight || localStorage.getItem('dark') === '1') {
+      if(!(isNight&&localStorage.getItem('noDark') === '1')) {
+        document.body.classList.add('dark');
+      }
+    }
+    document.getElementById('dark').innerHTML = document.querySelector("body").classList.contains("dark")?"🌙":"🌞";
+  </script>
   <header id="header" class="inner"><div class="alignleft">
   <h1><a href="/IndeneChannel.github.io/">Indene</a></h1>
   <h2><a href="/IndeneChannel.github.io/">家&lt;se.10&gt;</a></h2>
@@ -123,6 +150,9 @@
         🍉奥特曼/假面骑士 婉拒cp向，不是所有感情都是爱情 <br>
         ⚠️雷点 骑士相关🚫 冲田组🚫 战黑但是光暗🚫←你们没有自己的cp名吗
     </p> 
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id=1923184631&auto=1&height=66">
+
+    </iframe>
   </div>
   
 
@@ -133,7 +163,7 @@
   <h3 class="title">标签</h3>
   <ul class="entry">
   
-    <li><a href="/IndeneChannel.github.io/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E8%AE%B0/">开发日记</a><small>5</small></li>
+    <li><a href="/IndeneChannel.github.io/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E8%AE%B0/">开发日记</a><small>6</small></li>
   
     <li><a href="/IndeneChannel.github.io/tags/%E6%B5%8B%E8%AF%95/">测试</a><small>2</small></li>
   
@@ -173,6 +203,14 @@
   $('.fancybox').fancybox();
 })(jQuery);
 </script>
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+    <a title="芜湖起飞" target="_blank" rel="noopener" href="https://imgtu.com/i/jhxpBq"><img src="https://s1.ax1x.com/2022/07/15/jhxpBq.png" alt="jhxpBq.png" 
+        border="0" width="50px" height="50px"
+        /></a>
+</div>
+<script src="/IndeneChannel.github.io/js/totop.js"></script>
 
 </body>
 </html>
